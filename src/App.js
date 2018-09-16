@@ -6,13 +6,15 @@ import romanize from './conversor';
 class App extends Component {
   constructor() {
     super();
-    this.state = {value : 
-      {
-        arabian: '',
-        roman: ''
-      }
+    this.state = {
+      value :
+        {
+          arabian: '',
+          roman: ''
+        }
     }
   }
+
   handleChange = (e) =>{ 
     this.setState({value: 
       {
@@ -21,6 +23,7 @@ class App extends Component {
       }
     });
   }
+  
   render() {
     return (
       <div className="App">
@@ -29,8 +32,8 @@ class App extends Component {
           <h1 className="App-title">HELLO WORLD</h1>
         </header>
         <div>
-          <input type="number" value={this.state.value.arabian} onChange={this.handleChange}/>
-          <div>{this.state.value.roman}</div>
+          <input className="input" type="number" value={this.state.value.arabian} onChange={this.handleChange}/>
+          <div className="font margin-top">{this.state.value.roman}</div>
         </div>
       </div>
     );
