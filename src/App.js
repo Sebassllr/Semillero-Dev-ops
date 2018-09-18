@@ -16,7 +16,8 @@ class App extends Component {
   }
 
   handleChange = (e) =>{ 
-    this.setState({value: 
+    this.setState({
+      value: 
       {
         arabian: e.target.value,
         roman: romanize(e.target.value)
