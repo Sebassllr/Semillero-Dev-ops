@@ -3,9 +3,6 @@ pipeline {
     environment {
         CI = 'true' 
     }
-    environment {
-        CI = 'true'
-    }
     stages {
         stage('Build') {
             steps {
@@ -20,11 +17,6 @@ pipeline {
         stage('Deliver') { 
             steps {
                 sh './jenkins/scripts/deliver.sh' 
-            }
-        }
-        stage('Test') {
-            steps {
-                sh 'npm run test'
             }
         }
     }
