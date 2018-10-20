@@ -1,7 +1,7 @@
 pipeline {
 	agent any
     environment {
-        CI = 'true' 
+        CI = 'true'
     }
     stages {
         stage('Build') {
@@ -11,13 +11,13 @@ pipeline {
         }
         stage('Test') { 
             steps {            	
-                sh './jenkins/scripts/test.sh' 
+                sh 'npm run test' 
             }
         }
-        stage('Deliver') { 
-            steps {
-                sh './jenkins/scripts/deliver.sh' 
-            }
-        }
+        // stage('Deliver') { 
+        //     steps {
+        //         sh './jenkins/scripts/deliver.sh' 
+        //     }
+        // }
     }
 }
