@@ -18,7 +18,7 @@ pipeline {
             steps {
                 // sh 'npm run build'
                 // sh 'zip build.zip build'
-                echo 'pwd'
+                sh 'pwd'
             }
         }
     }
