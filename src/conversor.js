@@ -12,7 +12,7 @@ function romanize(n) {
 		letras = ['I', 'V', 'X', 'L', 'C', 'D', 'M'],
 		res = [],
 		num, letra, val, pos, insert
-
+// eslint-disable-next-line
 	for(var i = 6; num = values[i], letra = letras[i]; i--) {
 		if(n >= num) {
 			var r = Math.floor(n / num)
