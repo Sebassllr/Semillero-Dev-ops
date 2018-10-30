@@ -14,11 +14,11 @@ pipeline {
                 sh 'npm run test' 
             }
         }
-        stage('Deliver') { 
-            steps {
-                sh 'npm run start' 
-            }
-        }
+        // stage('Deliver') { 
+        //     steps {
+        //         sh 'npm run start' 
+        //     }
+        // }
     }
     post {
         always {
