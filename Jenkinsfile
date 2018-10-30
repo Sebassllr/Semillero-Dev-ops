@@ -4,7 +4,7 @@ pipeline {
         CI = 'true'
     }
     stages {
-        stage('Build') {
+        stage('Install') {
             steps {
                 sh 'npm install'
             }
@@ -14,15 +14,16 @@ pipeline {
                 sh 'npm run test' 
             }
         }
-        // stage('Deliver') { 
-        //     steps {
-        //         sh 'npm run start' 
-        //     }
-        // }
+        stage('Build') { 
+            steps {
+                sh 'zip build.zip build'
+
+            }
+        }
     }
     post {
-        always {
-            archiveArtifacts artifacts: 'README.md', fingerprint: true
+        success {
+            archiveArtifacts artifacts: 'build.zip', fingerprint: true
         }
     }
 }
