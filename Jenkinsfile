@@ -17,7 +17,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'npm run build'
-                sh 'zip build.zip build'                
+                sh 'zip -r build.zip build'                
             }
         }
     }
